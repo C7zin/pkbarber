@@ -100,6 +100,7 @@ i {
   align-items: center;
   justify-content: center;
   margin-top: 14px;
+  width: 50%;
 }
 @media screen and (max-width: 768px) {
   .header-content {
@@ -390,4 +391,7 @@ p {
   .btn-whatsapp img {
     max-width: 64px;
   }
+}
+.logo-final {
+  width: 50%;
 }
