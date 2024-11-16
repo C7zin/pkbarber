@@ -403,11 +403,15 @@ p {
   justify-content: center;
   gap: 48px;
   position: relative;
+  padding: 0 15px; /* Adicionando padding para garantir que o conteúdo não encoste nas bordas em telas pequenas */
+  flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha se não couberem */
 }
+
 #testimonials-client {
   width: 500px;
   height: auto;
   border-radius: 6px;
+  max-width: 100%; /* Garante que o conteúdo nunca ultrapasse a largura da tela */
 }
 
 #testimonials-tittle {
@@ -431,6 +435,7 @@ p {
 
 #content-testimonials {
   width: 50%;
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
 }
 
 #feedbacks {
@@ -447,8 +452,7 @@ p {
   background-color: var(--white-dark);
   padding: 12px;
   border-radius: 12px;
-  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0 rgba(6, 18, 30, 0.1) 1);
-  border-radius: 6px;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
 
 .feedback-avatar {
@@ -464,5 +468,66 @@ p {
 }
 
 .fa-regular.fa-star {
-  color: #ffd700; /* Ou gold, que é uma cor mais conhecida para dourado */
+  color: #ffd700;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  #testimonials {
+    gap: 30px; /* Reduzindo o gap em telas menores */
+    flex-direction: column; /* Mudando para uma coluna em telas pequenas */
+  }
+
+  #testimonials-client {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+  }
+
+  #testimonials-tittle {
+    font-size: 28px; /* Reduzindo o tamanho da fonte do título */
+    margin-top: 10px;
+  }
+
+  #testimonials-subtittle {
+    font-size: 2.5rem; /* Reduzindo o tamanho da fonte do subtítulo */
+    padding-bottom: 30px;
+  }
+
+  #content-testimonials {
+    width: 100%; /* Deixa o conteúdo ocupar toda a largura disponível */
+  }
+
+  #feedback {
+    flex-direction: column; /* Alinha os feedbacks na vertical em telas menores */
+    gap: 10px;
+    padding: 10px; /* Reduzindo o padding */
+  }
+
+  .feedback-avatar {
+    width: 80px; /* Ajusta o tamanho da imagem do avatar */
+    height: 80px;
+  }
+
+  .feedback-content p {
+    font-size: 1rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 480px) {
+  #testimonials-tittle {
+    font-size: 24px; /* Menor tamanho de fonte para o título em telas muito pequenas */
+  }
+
+  #testimonials-subtittle {
+    font-size: 2rem; /* Ajustando o tamanho da fonte para telas pequenas */
+  }
+
+  .feedback-avatar {
+    width: 60px; /* Tamanho menor do avatar */
+    height: 60px;
+  }
+
+  .feedback-content p {
+    font-size: 0.9rem; /* Fontes menores em telas pequenas */
+  }
 }
