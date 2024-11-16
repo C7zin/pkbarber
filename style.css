@@ -395,3 +395,74 @@ p {
 .logo-final {
   width: 50%;
 }
+
+#testimonials {
+  min-height: calc(100vh - 91px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  position: relative;
+}
+#testimonials-client {
+  width: 500px;
+  height: auto;
+  border-radius: 6px;
+}
+
+#testimonials-tittle {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  color: var(--white-normal);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+#testimonials-subtittle {
+  font-size: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  color: var(--white-dark);
+}
+
+#content-testimonials {
+  width: 50%;
+}
+
+#feedbacks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+#feedback {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--white-dark);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0 rgba(6, 18, 30, 0.1) 1);
+  border-radius: 6px;
+}
+
+.feedback-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.feedback-content p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-regular.fa-star {
+  color: #ffd700; /* Ou gold, que é uma cor mais conhecida para dourado */
+}
